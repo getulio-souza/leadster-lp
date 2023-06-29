@@ -7,13 +7,20 @@ export const metadata = {
 
 const Layout = () => {
   return (
-    <html lang='pt-br'>
+    <html lang="pt-br">
       <body>
-        <section className='full-background'>
+        <section className="full-background">
+          {/* logo */}
+          {/* header */}
+          {/* filter bar */}
+          {/* cards */}
+          {/* pagination */}
+          {/* Offer */}
+          {/* footer */}
         </section>
       </body>
     </html>
-  )
+  );
 }
 
 export default Layout;
