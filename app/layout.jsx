@@ -1,16 +1,20 @@
-import '../styles/globals.css'
+"use client";
+
+import Logo from "@/components/1-logo/logo";
+import "../styles/globals.css";
 
 export const metadata = {
-  title: 'Menos conversinha. Mais conversão', 
-  description:'Conheça as estratégias que mudaram o jogo e como aplicá-las no seu negócio'
-}
+  title: "Menos conversinha. Mais conversão",
+  description:
+    "Conheça as estratégias que mudaram o jogo e como aplicá-las no seu negócio",
+};
 
 const Layout = () => {
   return (
     <html lang="pt-br">
       <body>
         <section className="full-background">
-          {/* logo */}
+          <Logo />
           {/* header */}
           {/* filter bar */}
           {/* cards */}
@@ -21,6 +25,6 @@ const Layout = () => {
       </body>
     </html>
   );
-}
+};
 
 export default Layout;
