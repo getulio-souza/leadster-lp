@@ -1,6 +1,7 @@
 "use client";
 
 import Logo from "@/components/1-logo/logo";
+import Header from '@/components/2-header/header'
 import "../styles/globals.css";
 
 export const metadata = {
@@ -15,6 +16,7 @@ const Layout = () => {
       <body>
         <section className="full-background">
           <Logo />
+          <Header/>
           {/* header */}
           {/* filter bar */}
           {/* cards */}
