@@ -2,6 +2,8 @@
 
 import Logo from "@/components/1-logo/logo";
 import Header from '@/components/2-header/header'
+import Bar from '@/components/3-BarFilter/bar'
+
 import "../styles/globals.css";
 
 export const metadata = {
@@ -16,13 +18,8 @@ const Layout = () => {
       <body>
         <section className="full-background">
           <Logo />
-          <Header/>
-          {/* header */}
-          {/* filter bar */}
-          {/* cards */}
-          {/* pagination */}
-          {/* Offer */}
-          {/* footer */}
+          <Header />
+          < Bar />
         </section>
       </body>
     </html>
