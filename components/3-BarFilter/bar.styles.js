@@ -62,9 +62,3 @@ export const DropDownOptions = styled.select`
 `;
 
 export const DropdownOption = styled.option``;
-
-export const FilterContainerUnderline = styled.div`
-  width: 85%;
-  border: 1px solid #d5cccc;
-  margin: 20px auto;
-`;

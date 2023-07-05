@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import {
   FilterBackground,
   FilterContainer,
-  FilterContainerUnderline,
   CategoryContainer,
   SingleCategory,
   SingleCategorySelected,
@@ -12,6 +11,8 @@ import {
   DropDownOptions,
   DropdownOption,
 } from "../3-BarFilter/bar.styles";
+
+import GenericUnderline from '@/components/underline/underline'
 
 function Bar() {
   const [value, setValue] = useState("Data da Publicação");
@@ -48,7 +49,7 @@ function Bar() {
           </DropDownOptions>
         </DropdownFilter>
       </FilterContainer>
-        <FilterContainerUnderline></FilterContainerUnderline>
+        <GenericUnderline/>
     </FilterBackground>
   );
 }

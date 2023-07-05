@@ -5,11 +5,11 @@ import {
   HeaderLabel,
   HeaderSubtitle,
   HeaderTitle,
-  HeaderTitleUnderline,
   HeaderDescription,
   HighLightText,
 } from "../2-header/header.styles";
 
+import GenericUnderline from '@/components/underline/underline'
 
 function Header() {
   return (
@@ -18,7 +18,7 @@ function Header() {
         <HeaderLabel>Webinars exclusivos</HeaderLabel>
         <HeaderSubtitle>Menos Conversinha,</HeaderSubtitle>
         <HeaderTitle>Mais Conversão</HeaderTitle>
-        <HeaderTitleUnderline></HeaderTitleUnderline>
+        <GenericUnderline/>
         <HeaderDescription>
           Conheça as estratégias que <HighLightText>mudaram o jogo</HighLightText> e como
           aplicá-las no seu negócio

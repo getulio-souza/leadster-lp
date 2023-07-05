@@ -44,12 +44,6 @@ export const HeaderTitle = styled.h1`
   font-size:50px;
   color:#2c83fb;
 `;
-  
-export const HeaderTitleUnderline = styled.div`
-  width: 100%;
-  border: 1px solid #d5cccc;
-  margin: 5px 0px;
-`;
 
 export const HeaderDescription = styled.p`
   text-align:center;
