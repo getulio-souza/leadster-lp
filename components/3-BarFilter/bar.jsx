@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from "react";
 
 import {
+  FilterBackground,
   FilterContainer,
+  FilterContainerUnderline,
   CategoryContainer,
   SingleCategory,
   SingleCategorySelected,
@@ -12,27 +14,43 @@ import {
 } from "../3-BarFilter/bar.styles";
 
 function Bar() {
-  return (
-    <FilterContainer>
-      <CategoryContainer>
-        <SingleCategory>Agências</SingleCategory>
-        <SingleCategory>Chatbot</SingleCategory>
-        <SingleCategory>Marketing Digital</SingleCategory>
-        <SingleCategorySelected>Geração de Leads</SingleCategorySelected>
-        <SingleCategory>Mídia Paga</SingleCategory>
-      </CategoryContainer>
+  const [value, setValue] = useState("Data da Publicação");
 
-      {/* dropdown */}
-      <DropdownFilter>
-        <DropDownFilterTitle>Ordenar por</DropDownFilterTitle>
-        <DropDownOptions>
-          <DropdownOption>Data de publicação</DropdownOption>
-          <DropdownOption>Mais antigo</DropdownOption>
-          <DropdownOption>Mais relevante</DropdownOption>
-        </DropDownOptions>
-      </DropdownFilter>
-    </FilterContainer>
+  return (
+    <FilterBackground>
+      <FilterContainer>
+        <CategoryContainer>
+          <SingleCategory>Agências</SingleCategory>
+          <SingleCategory>Chatbot</SingleCategory>
+          <SingleCategory>Marketing Digital</SingleCategory>
+          <SingleCategorySelected>Geração de Leads</SingleCategorySelected>
+          <SingleCategory>Mídia Paga</SingleCategory>
+        </CategoryContainer>
+
+        {/* dropdown */}
+        <DropdownFilter>
+          <DropDownFilterTitle>Ordenar por</DropDownFilterTitle>
+          <DropDownOptions
+            value={value}
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+          >
+            <DropdownOption defaultValue="data">
+              Data de publicação
+            </DropdownOption>
+            <DropdownOption value="Ordem crescente">
+              Ordem crescente
+            </DropdownOption>
+            <DropdownOption value="Ordem decrescente">
+              Ordem decrescente
+            </DropdownOption>
+          </DropDownOptions>
+        </DropdownFilter>
+      </FilterContainer>
+        <FilterContainerUnderline></FilterContainerUnderline>
+    </FilterBackground>
   );
 }
 
-export default Bar
+export default Bar;

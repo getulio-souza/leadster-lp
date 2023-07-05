@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+export const FilterBackground = styled.div`
+
+`;
+
 export const FilterContainer = styled.section`
   display: flex;
   justify-content: space-around;
@@ -12,7 +16,7 @@ export const CategoryContainer = styled.article`
 `;
 
 export const SingleCategory = styled.div`
-  border: 1px solid black;
+  border: 1px solid #8d8888;
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 13px;
@@ -45,6 +49,22 @@ export const DropdownFilter = styled.div`
   align-items:center;
   gap:10px;
 `;
+
 export const DropDownFilterTitle = styled.h5``;
-export const DropDownOptions = styled.select``;
-export const DropdownOption = styled.div``;
+
+export const DropDownOptions = styled.select`
+  border: 1px solid #000;
+  background-color: transparent;
+  padding: 5px 7px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor:pointer;
+`;
+
+export const DropdownOption = styled.option``;
+
+export const FilterContainerUnderline = styled.div`
+  width: 85%;
+  border: 1px solid #d5cccc;
+  margin: 20px auto;
+`;
