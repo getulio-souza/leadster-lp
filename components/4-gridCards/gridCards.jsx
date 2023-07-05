@@ -1,12 +1,9 @@
 import React from 'react'
-
-import {
-  GridCardsContainer,
-} from "@/components/4-gridCards/gridCards.styles";
 import Card from '@/components/card/card'
+import {GridCardsContainer} from "@/components/4-gridCards/gridCards.styles";
+import { GenericUnderline } from '../underline/underline.styles';
 
 function GridCards() {
-
   return (
     <GridCardsContainer>
       <Card />
@@ -17,6 +14,7 @@ function GridCards() {
       <Card />
       <Card />
       <Card />
+      <GenericUnderline/>
     </GridCardsContainer>
   );
 }
