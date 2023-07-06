@@ -4,6 +4,7 @@ import Logo from "@/components/1-logo/logo";
 import Header from '@/components/2-header/header'
 import Bar from '@/components/3-BarFilter/bar'
 import GridCards from "@/components/4-gridCards/gridCards";
+import Offer from '@/components/5-offer/offer'
 
 import "../styles/globals.css";
 
@@ -21,7 +22,8 @@ const Layout = () => {
           <Logo />
           <Header />
           < Bar />
-          <GridCards/>
+          <GridCards />
+          <Offer/>
         </section>
       </body>
     </html>
