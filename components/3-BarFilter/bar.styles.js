@@ -1,18 +1,23 @@
 import styled from 'styled-components'
 
-export const FilterBackground = styled.div`
-
-`;
+export const FilterBackground = styled.div``;
 
 export const FilterContainer = styled.section`
   display: flex;
+  flex-wrap:wrap;
   justify-content: space-around;
   padding-top:70px;
+  
 `;
 
 export const CategoryContainer = styled.article`
   display: flex;
   gap: 10px;
+  @media (max-width:900px){
+    flex-wrap:wrap;
+    justify-content:center;
+    padding-bottom: 20px;
+  }
 `;
 
 export const SingleCategory = styled.div`

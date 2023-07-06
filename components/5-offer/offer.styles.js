@@ -18,10 +18,16 @@ export const OfferMessageTitle = styled.h2`
   min-width: 300px;
   padding-bottom:5px;
   font-weight:500;
+  @media (max-width:900px){
+    margin:0 auto;
+  }
 `;
 
 export const OfferMessageSubtitle = styled.h5`
   font-weight:500;
+  @media (max-width:900px){
+    text-align:center;
+  }
 `;
 
 export const OfferBtnAndText = styled.div`
@@ -29,6 +35,12 @@ export const OfferBtnAndText = styled.div`
   justify-content: start;
   gap: 10px;
   padding-bottom:5px;
+  
+  @media (max-width:900px){
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Offerbtn = styled.button`
@@ -54,6 +66,10 @@ export const OfferAlertMessageBox = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  @media (max-width:900px){
+    flex-wrap: wrap;
+    justify-content:center;
+  }
 `;
 
 export const OfferAlertMessage = styled.div`

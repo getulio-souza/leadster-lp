@@ -38,16 +38,27 @@ export const HeaderSubtitle = styled.h3`
   color: #505269;
   font-weight: 500;
   font-size: 30px;
+
+  @media (max-width:900px){
+    font-size:20px;
+  }
 `;
 
 export const HeaderTitle = styled.h1`
   font-size:50px;
   color:#2c83fb;
+
+  @media (max-width:900px){
+    font-size:40px;
+  }
 `;
 
 export const HeaderDescription = styled.p`
   text-align:center;
   font-size: 12px;
+  @media (max-width:900px){
+    max-width:300px;
+  }
 `;
 
 export const HighLightText = styled.span`

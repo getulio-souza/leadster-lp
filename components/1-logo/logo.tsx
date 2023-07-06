@@ -1,9 +1,9 @@
 'use-client'
 
 import React from 'react'
-import { LogoContainer, CompanyLogo, LogoImg } from '../1-logo/logo.style'
+import { LogoContainer, CompanyLogo } from '../1-logo/logo.style'
 import Image from 'next/image'
-import logo from '../../public/assets/icons/logo.png'
+import logo from '@/public/assets/icons/transparent-logo.png'
 
 const Logo = () => {
   return (
@@ -11,7 +11,6 @@ const Logo = () => {
       <CompanyLogo>
         <Image
           src={logo}
-          // width={30}
           height={30}
           alt=''
         />

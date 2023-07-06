@@ -31,8 +31,7 @@ function Offer() {
       <OfferMessageContainer>
         <OfferMessage>
           <OfferMessageTitle>
-            Pronto para triplicar sua{" "}
-            <StrongerText>Geração de Leads?</StrongerText>
+            Pronto para triplicar sua <StrongerText>Geração de Leads?</StrongerText>
           </OfferMessageTitle>
           <OfferMessageSubtitle>
             Criação e ativação em <StrongerText>4 minutos</StrongerText>

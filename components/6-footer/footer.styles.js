@@ -16,21 +16,45 @@ export const FooterHeaderSubtitle = styled.p`
   padding-top: 5px;
 `;
 
-
 export const FooterCategoriesContainer = styled.article`
   display:flex;
   justify-content:space-evenly;
+  @media (max-width:900px){
+    flex-direction:column;
+    align-items:center;
+  }
 `;
-export const LinksContainer = styled.div``;
+
+export const LinksContainer = styled.div`
+  @media (max-width:900px){
+    text-align:center;
+    padding-bottom: 20px;
+  }
+`;
 
 export const FooterCategoryTitle = styled.h4`
   padding-bottom:30px;
   color:#5b5757;
 `;
 
-export const CasesContainer = styled.ul``;
-export const MaterialsContainer = styled.ul``;
-export const ContactContainer = styled.ul``;
+export const CasesContainer = styled.ul`
+@media (max-width:900px){
+  text-align:center;
+  padding-bottom: 20px;
+}`;
+
+export const MaterialsContainer = styled.ul`
+@media (max-width:900px){
+  text-align:center;
+  padding-bottom: 20px;
+}`;
+
+export const ContactContainer = styled.ul`
+@media (max-width:900px){
+  text-align:center;
+  padding-bottom: 20px;
+}
+`;
 
 export const FooterContactTitle = styled.h4`
   color:#5b5757;
@@ -53,6 +77,9 @@ export const ContactSocial = styled.article`
   display:flex;
   gap:10px;
   padding-bottom:10px;
+  @media (max-width:900px){
+    justify-content: center;
+  }
 `;
 
 export const SocialIconBackground = styled.div`
@@ -72,6 +99,9 @@ export const SocialIconBackground = styled.div`
 `;
 
 export const ContactInfo = styled.article`
+@media (max-width:900px){
+    justify-content:center;
+  }
 `;
 
 export const ContactEmail = styled.h6`
@@ -86,19 +116,32 @@ export const ContactTel = styled.h6`
 
 export const FooterBottom = styled.div`
   display: flex;
+  flex-wrap:wrap;
   justify-content: space-evenly;
   padding: 40px 0px;
   gap: 20px;
+  
 `;
 
 export const CopyrightText = styled.p`
   font-size:10px;
   color: #9b9b9b;
+  @media (max-width:900px){
+    max-width: 300px;
+    text-align: center;
+    padding: 0px 20px;
+  }
 `;
 
 export const AddressText = styled.p`
   color: #9b9b9b;
   font-size:10px;
+
+  @media (max-width:900px){
+    max-width: 300px;
+    text-align: center;
+    padding: 0px 20px;
+  }
 `;
 
 export const HightlightText = styled.span`
