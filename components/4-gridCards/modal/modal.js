@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import { ReactDOM } from "react";
 import {
   ModalContainer,
   ModalHeader,
@@ -11,10 +12,15 @@ import {
   ModalDownloadsTitle,
   ModalDownloadsFiles,
   ModalFile,
-} from "@/components/4-gridCards/videoModal/videoModal";
+} from "../modal/modal.styles";
 
-function VideoModal() {
-  return (
+const Modal = ({ onClose, children, title }) => {
+  const handleCloseClick = (e) => {
+    e.preventDefault();
+    onClose();
+  };
+
+  const modalContent = (
     <ModalContainer>
       <ModalHeader>
         <ModalTitle>
@@ -38,6 +44,11 @@ function VideoModal() {
       </ModalDownloads>
     </ModalContainer>
   );
-}
 
-export default VideoModal
+  return ReactDOM.createPortal(
+    modalContent,
+    document.getElementById("modal-root")
+  );
+};
+
+export default Modal

@@ -1,23 +1,27 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Card from '@/components/4-gridCards/card/card'
 import { GridCardsContainer, Cards } from "../4-gridCards/gridCards.styles";
 import { GenericUnderline } from '../underline/underline.styles';
-import VideoModal from '@/components/4-gridCards/videoModal/videoModal'
 import Pagination from '@/components/4-gridCards/pagination/pagination'
+import Modal from "@/components/4-gridCards/modal/modal"
+
 
 function GridCards() {
 
-  const [openModal, setOpenModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
   return (
     <Cards>
       <GridCardsContainer>
-        <Card
-          onClick={() => {
-            setOpenModal(true);
-          }}
-        />
-        {openModal && <VideoModal closeModal={setOpenModal} />}
+        {/* <button
+          onClick={() => setShowModal(true)}
+          {showModal && (
+            <Modal onClose={() => setShowModal(false)}>Aqui tem um modal</Modal>
+          )}
+        >
+          botao modal
+        </button> */}
+        <Card />
         <Card />
         <Card />
         <Card />
@@ -26,8 +30,8 @@ function GridCards() {
         <Card />
         <Card />
       </GridCardsContainer>
-        <GenericUnderline />
-        <Pagination />
+      <GenericUnderline />
+      <Pagination />
     </Cards>
   );
 }
