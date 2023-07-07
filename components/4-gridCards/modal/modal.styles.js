@@ -10,6 +10,10 @@ export const ModalContainer = styled.section`
   transform:translate(-50%, -50%);
   z-index:10;
   border-radius:5px;
+  @media (max-width:900px){
+    width:80%;
+    height:50%;
+  }
 `;
 
 export const ModalHeader = styled.div`
@@ -21,6 +25,10 @@ export const ModalThumb = styled.div`
   height: 100%;
   background-color:#2a2a2a;
   position:relative;
+  @media (max-width:900px){
+    width:100%;
+    height:50%;
+  }
 `;
 
 export const ModalPlayBtn = styled.div`
