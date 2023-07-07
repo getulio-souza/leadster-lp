@@ -2,6 +2,8 @@ import React from "react";
 import {
   ModalContainer,
   ModalHeader,
+  ModalThumb,
+  ModalPlayBtn,
   ModalCloseBtn,
   ModalTitle,
   HighLightColor,
@@ -14,10 +16,10 @@ import {
   ModalFile,
   ModalFileTitle,
 } from "../modal/modal.styles";
-
-import videoThumb from "@/public/assets/images/video-thumb.png";
+import "../../../styles/globals.css"
 import Image from "next/image";
 import downloadIcon from "@/public/assets/icons/cloud-download-icon.png";
+import playButton from '@/public/assets/icons/play-arrow.png'
 
 const Modal = ({ isOpen, onClose }) => {
 
@@ -33,11 +35,21 @@ const Modal = ({ isOpen, onClose }) => {
           <HighLightColor>Webninar:</HighLightColor> Como aumentar sua geração de Leads feat. Traktor
         </ModalTitle>
       </ModalHeader>
-      <Image
+      <ModalThumb>
+        <ModalPlayBtn>
+          <Image
+            src={playButton}
+            width={50}
+            alt=""
+            className="modal-play-btn"
+          />
+        </ModalPlayBtn>
+      </ModalThumb>
+      {/* <Image
         src={videoThumb}
         width={100}
         style={{ width: "100%", height: "100%", objectFit:'cover' }}
-      />
+      /> */}
       {/* description */}
       <ModalDescription>
         <ModalDescriptionTitle>Descrição</ModalDescriptionTitle>

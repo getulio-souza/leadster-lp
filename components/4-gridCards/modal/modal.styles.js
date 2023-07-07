@@ -16,6 +16,24 @@ export const ModalHeader = styled.div`
   background-color:#fff;
 `;
 
+export const ModalThumb = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color:#2a2a2a;
+  position:relative;
+`;
+
+export const ModalPlayBtn = styled.div`
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background-color:grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 export const ModalCloseBtn = styled.button`
   border:none;
   background-color:transparent;
