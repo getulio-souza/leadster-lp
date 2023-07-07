@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, {useState} from 'react'
+import {useState} from 'react'
 import card from '@/public/assets/images/thumbnail.png'
 import {
   CardContainer,
