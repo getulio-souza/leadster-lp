@@ -1,10 +1,10 @@
 import React from "react";
-import { ReactDOM } from "react";
 import {
   ModalContainer,
   ModalHeader,
+  ModalCloseBtn,
   ModalTitle,
-  ModalVideo,
+  HighLightColor,
   ModalDescription,
   ModalDescriptionTitle,
   ModalDescriptionText,
@@ -12,43 +12,77 @@ import {
   ModalDownloadsTitle,
   ModalDownloadsFiles,
   ModalFile,
+  ModalFileTitle,
 } from "../modal/modal.styles";
 
-const Modal = ({ onClose, children, title }) => {
-  const handleCloseClick = (e) => {
-    e.preventDefault();
-    onClose();
-  };
+import videoThumb from "@/public/assets/images/video-thumb.png";
+import Image from "next/image";
+import downloadIcon from "@/public/assets/icons/cloud-download-icon.png";
 
-  const modalContent = (
+const Modal = ({ isOpen, onClose }) => {
+
+  if (!isOpen) {
+    return null;
+  }
+
+  return (
     <ModalContainer>
       <ModalHeader>
+        <ModalCloseBtn onClick={onClose}>X</ModalCloseBtn>
         <ModalTitle>
-          Webminar: Como aumentar sua geração de Leads feat. Traktor
+          <HighLightColor>Webninar:</HighLightColor> Como aumentar sua geração de Leads feat. Traktor
         </ModalTitle>
       </ModalHeader>
-      <ModalVideo></ModalVideo>
+      <Image
+        src={videoThumb}
+        width={100}
+        style={{ width: "100%", height: "100%", objectFit:'cover' }}
+      />
       {/* description */}
       <ModalDescription>
         <ModalDescriptionTitle>Descrição</ModalDescriptionTitle>
-        <ModalDescriptionText></ModalDescriptionText>
+        <ModalDescriptionText>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </ModalDescriptionText>
       </ModalDescription>
       {/* downloads */}
       <ModalDownloads>
         <ModalDownloadsTitle>Downloads</ModalDownloadsTitle>
         <ModalDownloadsFiles>
-          <ModalFile></ModalFile>
-          <ModalFile></ModalFile>
-          <ModalFile></ModalFile>
+          <ModalFile style={{ backgroundColor: "#98f398", color: "#338b33" }}>
+            <Image
+              src={downloadIcon}
+              width={10}
+              alt=""
+              style={{ color: "#338b33" }}
+            />
+            <ModalFileTitle>SpreadSheet.xls</ModalFileTitle>
+          </ModalFile>
+          <ModalFile style={{ backgroundColor: "#b4c7ff", color: "#4f6bff" }}>
+            <Image
+              src={downloadIcon}
+              width={10}
+              alt=""
+              style={{ color: "#4f6bff" }}
+            />
+            <ModalFileTitle>Document.doc</ModalFileTitle>
+          </ModalFile>
+          <ModalFile style={{ backgroundColor: "#eeeec2", color: "#787807" }}>
+            <Image
+              src={downloadIcon}
+              width={10}
+              alt=""
+              style={{ color: "#787807" }}
+            />
+            <ModalFileTitle>Presentation.ppt</ModalFileTitle>
+          </ModalFile>
         </ModalDownloadsFiles>
       </ModalDownloads>
     </ModalContainer>
   );
-
-  return ReactDOM.createPortal(
-    modalContent,
-    document.getElementById("modal-root")
-  );
 };
 
-export default Modal
+export default Modal;

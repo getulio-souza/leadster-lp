@@ -5,22 +5,11 @@ import { GenericUnderline } from '../underline/underline.styles';
 import Pagination from '@/components/4-gridCards/pagination/pagination'
 import Modal from "@/components/4-gridCards/modal/modal"
 
-
 function GridCards() {
-
-  const [showModal, setShowModal] = useState(true);
 
   return (
     <Cards>
       <GridCardsContainer>
-        {/* <button
-          onClick={() => setShowModal(true)}
-          {showModal && (
-            <Modal onClose={() => setShowModal(false)}>Aqui tem um modal</Modal>
-          )}
-        >
-          botao modal
-        </button> */}
         <Card />
         <Card />
         <Card />
