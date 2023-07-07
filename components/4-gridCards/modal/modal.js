@@ -4,6 +4,11 @@ import {
   ModalHeader,
   ModalThumb,
   ModalPlayBtn,
+  VideoStatusLine,
+  VideoStatus,
+  VideoControls,
+  PlayButtons,
+  ConfigButtons,
   ModalCloseBtn,
   ModalTitle,
   HighLightColor,
@@ -19,7 +24,14 @@ import {
 import "../../../styles/globals.css"
 import Image from "next/image";
 import downloadIcon from "@/public/assets/icons/cloud-download-icon.png";
+
 import playButton from '@/public/assets/icons/play-arrow.png'
+import previous from '@/public/assets/icons/previous.png'
+import play from '@/public/assets/icons/right-arrow.png'
+
+import gear from '@/public/assets/icons/gear.png'
+import rectangle from '@/public/assets/icons/rectangular-shape.png'
+import select from '@/public/assets/icons/select.png'
 
 const Modal = ({ isOpen, onClose }) => {
 
@@ -44,12 +56,57 @@ const Modal = ({ isOpen, onClose }) => {
             className="modal-play-btn"
           />
         </ModalPlayBtn>
+        
+        {/* video controls */}
+        <VideoControls>
+          {/* play buttons */}
+            <PlayButtons>
+              <Image
+                src={previous}
+                width={12}
+                alt=""
+                className="prev-btn"
+              />
+              <Image
+                src={play}
+                width={12}
+                alt=""
+                className="play-btn"
+              />
+              <Image
+                src={previous}
+                width={12}
+                alt=""
+                className="next-btn"
+              />
+          </PlayButtons>
+          {/* config */}
+            <ConfigButtons>
+              <Image
+                src={gear}
+                width={15}
+                alt=""
+                className="next-btn"
+              />
+              <Image
+                src={rectangle}
+                width={15}
+                alt=""
+                className="next-btn"
+              />
+              <Image
+                src={select}
+                width={15}
+                alt=""
+                className="next-btn"
+              />
+            </ConfigButtons>
+        </VideoControls>
+        {/* video status */}
+        <VideoStatusLine>
+          <VideoStatus></VideoStatus>
+        </VideoStatusLine>
       </ModalThumb>
-      {/* <Image
-        src={videoThumb}
-        width={100}
-        style={{ width: "100%", height: "100%", objectFit:'cover' }}
-      /> */}
       {/* description */}
       <ModalDescription>
         <ModalDescriptionTitle>Descrição</ModalDescriptionTitle>

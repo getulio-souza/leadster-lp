@@ -17,10 +17,20 @@ body{
   color:#000;
 }
 
+/* modal */
+
 .modal-play-btn{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding-left: 5px;
+}
+
+.prev-btn, .next-btn, .play-btn{
+  filter: invert(1);
+}
+
+.next-btn{
+  transform: rotate(180deg);
 }

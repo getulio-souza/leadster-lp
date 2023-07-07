@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ModalContainer = styled.section`
-  width:30%;
+  width:35%;
   height:50%;
   background-color:#fff;
   position:absolute;
@@ -32,6 +32,40 @@ export const ModalPlayBtn = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+`;
+
+export const VideoStatusLine = styled.div`
+  position:absolute;
+  bottom: 30px;
+  background-color:#fff;
+  width:100%;
+  height:1px;
+`;
+
+export const VideoStatus = styled.div`
+  background-color:red;
+  width:20%;
+  height:1px;
+`;
+
+export const VideoControls = styled.div`
+  display:flex;
+`;
+
+export const PlayButtons = styled.div`
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  display:flex;
+  gap:10px;
+`;
+
+export const ConfigButtons = styled.div`
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display:flex;
+  gap:10px;
 `;
 
 export const ModalCloseBtn = styled.button`
